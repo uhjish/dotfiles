@@ -1,0 +1,19 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: rcc
+# key: rcc
+# binding: direct-keybinding
+# --
+class $1 extends React.Component {
+  static propTypes = {
+  }
+
+  constructor(...args) {
+    super(...args);
+
+    $2
+  }
+
+  render() {
+    return (<div>New component</div>);
+  }
+}

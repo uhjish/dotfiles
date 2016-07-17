@@ -7,9 +7,9 @@ yadr=$HOME/.yadr
 platform='unknown'
 unamestr=$(uname)
 if [[ $unamestr == 'Linux' ]]; then
-  platform='linux'
+    platform='linux'
 elif [[ $unamestr == 'Darwin' ]]; then
-  platform='darwin'
+    platform='darwin'
 fi
 
 # YADR support
@@ -33,11 +33,11 @@ alias df='df -h'
 alias du='du -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
-  alias ll='ls -alh --color=auto'
-  alias ls='ls --color=auto'
+    alias ll='ls -alh --color=auto'
+    alias ls='ls --color=auto'
 elif [[ $platform == 'darwin' ]]; then
-  alias ll='ls -alGh'
-  alias ls='ls -Gh'
+    alias ll='ls -alGh'
+    alias ls='ls -Gh'
 fi
 
 # show me files matching "ls grep"
@@ -45,7 +45,7 @@ alias lsg='ll | grep'
 
 # Alias Editing
 TRAPHUP() {
-  source $yadr/zsh/aliases.zsh
+    source $yadr/zsh/aliases.zsh
 }
 
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
@@ -56,7 +56,7 @@ alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 mvim --version > /dev/null 2>&1
 MACVIM_INSTALLED=$?
 if [ $MACVIM_INSTALLED -eq 0 ]; then
-  alias vim="mvim -v"
+    alias vim="mvim -v"
 fi
 
 # mimic vim functions
@@ -211,3 +211,21 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+# bundle
+alias be='bundle exec'
+
+# tmux
+alias tma='tmux attach -d -t'
+
+## Color cat
+alias ccat='pygmentize -g'
+
+#alias em="open -a '/Applications/Emacs.app/Contents/MacOS/Emacs' "$PWD/$@""
+# alias em="/Applications/Emacs.app/Contents/MacOS/Emacs "$PWD/$@""
+
+em() {
+    # open -a /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/Emacs "$@"
+    open -a /Applications/Emacs.app/Contents/MacOS/Emacs "$@"
+     # emacsclient -n "${F}"
+}
