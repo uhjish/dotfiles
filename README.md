@@ -38,7 +38,7 @@ Please use GitHub Issues for pull requests or bug reports only.
 To get started please run:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+sh -c `curl -fsSL https://raw.githubusercontent.com/uhjish/dotfiles/master/install.sh`
 ```
 
 **Note:** YADR will automatically install all of its subcomponents. If you want to be asked
