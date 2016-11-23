@@ -1,0 +1,3 @@
+Bundle 'tmhedberg/SimpylFold'
+Bundle 'nvie/vim-flake8'
+
