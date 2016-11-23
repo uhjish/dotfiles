@@ -93,6 +93,7 @@
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
   prompt = false
+	keepBackup = true
 [mergetool "mvimdiff"]
   cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
   keepbackup=false
@@ -111,7 +112,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+	excludesfile = /Users/ajish/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]
@@ -127,4 +128,17 @@
   path = .gitconfig.user
 [user]
 	email = ajish@rootedinsights.com
-	name = Ajish
+	name = Ajish George
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pager]
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+[http "https://git.1dee.flynnhub.com"]
+	sslCAInfo = /Users/ajish/.flynn/ca-certs/flynn-1463683248.pem
+[credential "https://git.1dee.flynnhub.com"]
+	helper = /usr/local/bin/flynn git-credentials

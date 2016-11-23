@@ -14,3 +14,5 @@ vim/sessions
 .netrwhist
 bin/subl
 tags
+emacs/live-packs/auser-pack/auser/el-get
+emacs/emacs.d/.cask/

@@ -116,3 +116,7 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+au BufNewFile,BufRead *.py :set tabstop=4 softtabstop=4  shiftwidth=4  textwidth=79  expandtab  autoindent  fileformat=unix 
+
+colorscheme elflord

@@ -29,6 +29,7 @@ task :install => [:submodule_init, :submodules] do
 
   install_fonts
 
+  install_terminal_theme if RUBY_PLATFORM.downcase.include?("darwin")
   install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
 
   run_bundle_config
@@ -225,6 +226,16 @@ def install_term_theme
   else
     apply_theme_to_iterm_profile_idx profiles.index(selected), color_scheme_file
   end
+end
+
+def install_terminal_theme
+  puts "======================================================"
+  puts "Instructions for installing Smyck color scheme."
+  puts "======================================================"
+  puts
+  puts "======================================================"
+  puts "Double click on /terminal/Smyck/Smyck.terminal"
+  puts "======================================================"
 end
 
 def iTerm_available_themes
