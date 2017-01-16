@@ -1,9 +1,8 @@
 # export GOPATH=$HOME/Development/go/workspace
 # export PATH="$HOME/.gobrew/bin:$PATH:$GOPATH/bin"
 
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
+#export GOPATH=$HOME/.go
+#export PATH=$PATH:$GOPATH/bin
 
 # eval "$(gobrew init -)"
-
-source /Users/auser/.gvm/scripts/gvm
+source $HOME/.gvm/scripts/gvm

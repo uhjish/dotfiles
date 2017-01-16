@@ -58,6 +58,3 @@ function sync_file () {
     eval $CMD
 }
 
-function sync_photos() {
-    sync_dir "/Users/auser/Dropbox/Camera Uploads" "s3://a_personal/PhotoBackup/"
-}

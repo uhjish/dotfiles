@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: console.debug
-# key: console
-# binding: direct-keybinding
-# --
-console.debug('$1', $2);
