@@ -25,6 +25,9 @@ sh -c `curl -fsSL https://raw.githubusercontent.com/uhjish/dotfiles/master/insta
   * Many zsh plugins, starting with the wonderful Prezto base, and adding a few niceties on top.
   * All things are vimized: irb, postgres command line, etc.
 
+*Linux/Ubuntu is not supported! If it works, great. If it doesn't, please don't complain. You may need to install zsh if you don't already have it.*
+*That being said, check the Docker section below*
+
 ## Mailing List
 
 Got questions, concerns, want to hear announcements? Join the [Google Group](https://groups.google.com/forum/#!forum/yadr-users)
@@ -188,7 +191,7 @@ of plugins above to learn more.
  * `,F` - same as `,f` but in a vertical split
  * `,gf` or `Ctrl-f` - same as vim normal gf (go to file), but in a vertical split (works with file.rb:123 line numbers also)
  * `gF` - standard vim mapping, here for completeness (go to file at line number)
- * `K` - Search the current word under the cursor and show results in quickfix window
+ * `,k` - Search the current word under the cursor and show results in quickfix window
  * `,K` - Grep the current word up to next exclamation point (useful for ruby foo! methods)
  * `Cmd-*` - highlight all occurrences of current word (similar to regular `*` except doesn't move)
  * `,hl` - toggle search highlight on and off
@@ -281,6 +284,20 @@ of plugins above to learn more.
 * [Overriding vim settings with ~/.vimrc.after and friends](doc/vim/override.md)
 * [Adding your own vim plugins](doc/vim/manage_plugins.md)
 
+## Testing with Docker
+
+We can use Docker to test some changes in a **Linux** Container.
+
+Assuming your host system has Docker & Docker Compose properly installed, run:
+
+    docker-compose run dotfiles
+
+This will build the container image it never built it before (which may take a while -- future times will be faster) and then run a `zsh` session inside that container for you.
+There you can play around, test commands, aliases, etc.
+
+*Warning*: this repo is primarly OSX oriented. So any support for Linux can only be done with the help of the community.
+
+
 ## Misc
 
 * [Credits & Thanks](doc/credits.md)
@@ -315,7 +332,6 @@ Installing terminal vim (with lua) with an RVM managed Ruby can cause the neocom
 brew uninstall vim
 rvm system do brew install vim --with-lua
 ```
-
 
 ### [Pry](http://pry.github.com/)
 

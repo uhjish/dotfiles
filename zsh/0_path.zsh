@@ -1,12 +1,14 @@
 # path, the 0 in the filename causes this to load first
-path=(
-  $path
-  $HOME/.yadr/bin
-  $HOME/.yadr/bin/yadr
-)
 
-export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
-export PATH="/Users/auser/.evm/bin:$PATH"
-export PATH="/usr/local/dev-env/bin:$PATH"
-export DYLD_LIBRARY_PATH="/usr/local/cuda/lib:$DYLD_LIBRARY_PATH"
+pathAppend() {
+  # Only adds to the path if it's not already there
+  if ! echo $PATH | egrep -q "(^|:)$1($|:)" ; then
+    PATH=$PATH:$1
+  fi
+}
+
+# Remove duplicate entries from PATH:
+PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
+
+pathAppend "$HOME/.yadr/bin"
+pathAppend "$HOME/.yadr/bin/yadr"

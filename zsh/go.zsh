@@ -6,4 +6,4 @@ export PATH=$PATH:$GOPATH/bin
 
 # eval "$(gobrew init -)"
 
-source /Users/auser/.gvm/scripts/gvm
+source /Users/ajish/.gvm/scripts/gvm
