@@ -1,2 +1,0 @@
-
-(provide 'auser-foundation)

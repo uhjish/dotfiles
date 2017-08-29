@@ -134,7 +134,13 @@
 	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  trustExitCode = true
+[diff]
+      external = "/Applications/DeltaWalker.app/Contents/Resources/git-diff"
+[merge]
+      tool = deltawalker
+[mergetool  "mydeltawalker"]
+      cmd = '/Applications/DeltaWalker.app/Contents/Resources/git-merge' "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 [pager]
 	show = diff-so-fancy | less --tabs=1,5 -RFX
 	diff = diff-so-fancy | less --tabs=1,5 -RFX

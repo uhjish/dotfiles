@@ -1,0 +1,5 @@
+
+# make sure sandboxd is loaded and available
+source $HOME/.yadr/bin/sandboxd
+
+

@@ -2,9 +2,3 @@
 	path = zsh/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
   ignore = dirty
-[submodule "emacs/tern"]
-	path = emacs/tern
-	url = https://github.com/marijnh/tern.git
-[submodule "terminal/Smyck"]
-	path = terminal/Smyck
-	url = https://github.com/hukl/Smyck-Color-Scheme.git

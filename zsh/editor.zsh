@@ -1,2 +1,2 @@
 export ALTERNATE_EDITOR=""
-export EDITOR=emacsclient
+export EDITOR=vim
