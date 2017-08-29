@@ -27,5 +27,5 @@ else
   end
 endif
 
-colorscheme elflord
+colorscheme solarized
 set background=dark

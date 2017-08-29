@@ -18,4 +18,3 @@ alias v.cdsitepackages='cdsitepackages'
 alias v.cd='cdvirtualenv'
 alias v.lssitepackages='lssitepackages'
 
-export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
